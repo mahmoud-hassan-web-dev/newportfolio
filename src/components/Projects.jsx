@@ -18,6 +18,13 @@ export default function Projects() {
           {projects.map((p) => (
             <div className="project-card" key={p.name}>
               <div className="project-top" style={{ background: p.accent }}></div>
+              
+              {p.img && (
+                <div className="project-image">
+                  <img src={p.img} alt={`Preview of ${p.name}`} />
+                </div>
+              )}
+              
               <div className="project-body">
                 <div className="project-head">
                   <h3>{p.name}</h3>

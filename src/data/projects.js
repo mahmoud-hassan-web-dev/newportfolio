@@ -3,6 +3,7 @@ export const projects = [
     name: 'ShopGo',
     badge: 'Team project',
     accent: 'var(--coral)',
+    img: '/photo/shop-go/Untitled.png',
     desc: 'Full-stack e-commerce platform built with MVC architecture. Implemented JWT authentication and role-based access control, plus custom data structures (circular doubly linked list, stack, queue) to optimize core logic.',
     stack: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'Vanilla JS'],
     live: null,
@@ -11,6 +12,7 @@ export const projects = [
   {
     name: 'Tech Shop',
     accent: 'var(--hero)',
+    img: '/photo/img-tech/Untitled.png',
     desc: 'Responsive front-end e-commerce platform tailored for tech gadgets, with interactive product filtering and shopping cart functionality.',
     stack: ['JavaScript', 'CSS Modules', 'HTML'],
     live: 'https://tech-shop-six-neon.vercel.app/',
@@ -19,6 +21,7 @@ export const projects = [
   {
     name: 'E-Commerce Store',
     accent: 'var(--mint)',
+    img: '/photo/img-e-commerce/Untitled.png',
     desc: 'Front-end e-commerce interface with a shopping cart powered by React Context API for global state, and responsive product cards across all devices.',
     stack: ['React', 'CSS Modules', 'Context API'],
     live: 'https://portfolio-caqu.vercel.app/',
@@ -27,6 +30,7 @@ export const projects = [
   {
     name: 'AI-Core Landing Page',
     accent: 'var(--yellow)',
+    img: '/photo/img-ai-core/Untitled.png',
     desc: 'Modern, highly responsive landing page demonstrating strong UI/UX principles, styled rapidly with Tailwind CSS on a clean, scalable codebase.',
     stack: ['React', 'Tailwind CSS', 'JavaScript'],
     live: 'https://ai-core-chi.vercel.app/',
@@ -35,6 +39,7 @@ export const projects = [
   {
     name: 'Task Flow',
     accent: 'var(--coral)',
+    img: '/photo/img-task-flow/Untitled.png',
     desc: 'Dynamic task management application with category filtering and real-time state updates, using local storage for data persistence.',
     stack: ['HTML', 'CSS Modules', 'JavaScript'],
     live: 'https://task-flow-chi-ten-81.vercel.app/',

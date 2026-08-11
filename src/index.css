@@ -267,6 +267,29 @@
   .project-card:nth-child(3) .project-top{--bar:var(--mint);}
   .project-card:nth-child(4) .project-top{--bar:var(--yellow);}
   .project-card:nth-child(5) .project-top{--bar:var(--coral);}
+
+  /* 👇👇 الجزء الجديد الخاص بالصور 👇👇 */
+  .project-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.4s ease;
+  }
+  
+  .project-card:hover .project-image img {
+    transform: scale(1.04);
+  }
+  /* 👆👆 نهاية جزء الصور 👆👆 */
+
   .project-body{padding:26px 26px 24px; display:flex; flex-direction:column; gap:14px; flex:1;}
   .project-head{display:flex; align-items:flex-start; justify-content:space-between; gap:12px;}
   .project-head h3{font-size:1.15rem; font-family:var(--font-body); font-weight:600;}
@@ -290,7 +313,6 @@
   .project-links a.primary{background:var(--ink); color:var(--white);}
   .project-links a.primary:hover{background:var(--coral-deep); border-color:var(--coral-deep);}
   .project-links a.secondary:hover{background:var(--ink); color:var(--white);}
-
   /* ---------- CONTACT ---------- */
   .contact{
     background:linear-gradient(135deg, var(--hero-deep), var(--hero) 60%, #3a1fb8);
