@@ -21,7 +21,9 @@ export default function Projects() {
               
               {p.img && (
                 <div className="project-image">
-                  <img src={p.img} alt={`Preview of ${p.name}`} />
+                 <a href={p.live} target="_blank" rel="noopener noreferrer">
+                    <img src={p.img} alt={`Preview of ${p.name}`} />
+                 </a>
                 </div>
               )}
               
