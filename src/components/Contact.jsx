@@ -23,11 +23,11 @@ export default function Contact() {
           <a href="tel:+201006827266">
             <span className="label">Phone</span>01006827266
           </a>
-          <a href="https://linkedin.com/in/mahmoud-hassan-353560416" target="_blank" rel="noopener noreferrer">
-            <span className="label">LinkedIn</span>mahmoud-hassan-353560416
+          <a href="https://linkedin.com/in/mahmoud-hassan-web-dev" target="_blank" rel="noopener noreferrer">
+            <span className="label">LinkedIn</span>Mahmoud Hassan
           </a>
-          <a href="https://github.com/m71787660-tech" target="_blank" rel="noopener noreferrer">
-            <span className="label">GitHub</span>m71787660-tech
+          <a href="https://github.com/mahmoud-hassan-web-dev" target="_blank" rel="noopener noreferrer">
+            <span className="label">GitHub</span>Mahmoud.Dev
           </a>
         </div>
       </div>
