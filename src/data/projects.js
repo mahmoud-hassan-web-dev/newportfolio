@@ -7,7 +7,7 @@ export const projects = [
     desc: 'Full-stack e-commerce platform built with MVC architecture. Implemented JWT authentication and role-based access control, plus custom data structures (circular doubly linked list, stack, queue) to optimize core logic.',
     stack: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'Vanilla JS'],
     live: null,
-    github: null,
+    github: 'https://github.com/mahmoud-hassan-web-dev/shopGo',
   },
   {
     name: 'Tech Shop',
@@ -16,7 +16,7 @@ export const projects = [
     desc: 'Responsive front-end e-commerce platform tailored for tech gadgets, with interactive product filtering and shopping cart functionality.',
     stack: ['JavaScript', 'CSS Modules', 'HTML'],
     live: 'https://tech-shop-six-neon.vercel.app/',
-    github: 'https://github.com/m71787660-tech/tech-shop',
+    github: 'https://github.com/mahmoud-hassan-web-dev/tech-shop',
   },
   {
     name: 'E-Commerce Store',
@@ -25,7 +25,7 @@ export const projects = [
     desc: 'Front-end e-commerce interface with a shopping cart powered by React Context API for global state, and responsive product cards across all devices.',
     stack: ['React', 'CSS Modules', 'Context API'],
     live: 'https://portfolio-caqu.vercel.app/',
-    github: 'https://github.com/m71787660-tech/portfolio',
+    github: 'https://github.com/mahmoud-hassan-web-dev/portfolio',
   },
   {
     name: 'AI-Core Landing Page',
@@ -34,7 +34,7 @@ export const projects = [
     desc: 'Modern, highly responsive landing page demonstrating strong UI/UX principles, styled rapidly with Tailwind CSS on a clean, scalable codebase.',
     stack: ['React', 'Tailwind CSS', 'JavaScript'],
     live: 'https://ai-core-chi.vercel.app/',
-    github: 'https://github.com/m71787660-tech/ai-core',
+    github: 'https://github.com/mahmoud-hassan-web-dev/ai-core',
   },
   {
     name: 'Task Flow',
@@ -43,6 +43,6 @@ export const projects = [
     desc: 'Dynamic task management application with category filtering and real-time state updates, using local storage for data persistence.',
     stack: ['HTML', 'CSS Modules', 'JavaScript'],
     live: 'https://task-flow-chi-ten-81.vercel.app/',
-    github: 'https://github.com/m71787660-tech/task-flow',
+    github: 'https://github.com/mahmoud-hassan-web-dev/task-flow',
   },
 ]
