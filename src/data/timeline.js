@@ -10,7 +10,7 @@ export const timeline = [
     detail: 'Egyptian Chinese University — Faculty of Engineering and Technology.',
   },
   {
-    date:'jul 2026 - present',
+    date:'jul 2026 - Present',
     title: 'React Front-End Web Development Scholarship',
     detail: 'Digital Egypt Pioneers initiative - DEPI . Scholarship',
   },
