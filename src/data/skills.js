@@ -13,7 +13,11 @@ export const skillGroups = [
   },
   {
     title: 'Tools & Workflow',
-    tags: ['Git', 'Terminal / Unix', 'AJAX & JSON', 'Async JavaScript', 'Vercel'],
+    tags: ['Git', 'Terminal / Unix', 'AJAX & JSON', 'Async JavaScript', 'Vercel','GitHub', 'npm', 'Postman', 'VS Code', 'Chrome DevTools','AI code assistants (testing and debugging)'],
+  },
+  {
+    title: 'Programming & Core CS',
+    tags: ['C++', 'Object-Oriented Programming (OOP) — strong foundation', 'quick to adapt to other statically-typed languages such as C#', 'Data Structures (Linked Lists, Stacks, Queues)', 'Linear Algebra & Matrix Logic'],
   },
 ]
 
