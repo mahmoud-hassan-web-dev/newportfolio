@@ -11,8 +11,8 @@ export const timeline = [
   },
   {
     date:'jul 2026 - present',
-    title: 'Digital Egypt Pioneers initiative - DEPI . internship',
-    detail: 'React Front-End Web Development.',
+    title: 'React Front-End Web Development Scholarship',
+    detail: 'Digital Egypt Pioneers initiative - DEPI . Scholarship',
   },
   {
     date: 'Aug 2026',
