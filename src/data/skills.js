@@ -21,4 +21,4 @@ export const skillGroups = [
   },
 ]
 
-export const heroTags = ['React.js', 'JavaScript ES6+', 'Tailwind CSS', 'Node.js', 'MongoDB', 'REST APIs']
+export const heroTags = ['React.js', 'JavaScript ES6+', 'Tailwind CSS', 'Node.js', 'MongoDB', 'REST APIs','Express.js']
