@@ -12,7 +12,7 @@ export const timeline = [
   {
     date:'Jul 2026 - Present',
     title: 'React Front-End Web Development Scholarship',
-    detail: 'Digital Egypt Pioneers initiative - DEPI . Scholarship',
+    detail: 'Digital Egypt Pioneers initiative - DEPI ',
   },
   {
     date: 'Aug 2026',
