@@ -45,4 +45,13 @@ export const projects = [
     live: 'https://task-flow-chi-ten-81.vercel.app/',
     github: 'https://github.com/mahmoud-hassan-web-dev/task-flow',
   },
+    {
+    name: 'CineScope',
+    accent: 'var(--green)',
+    img: '/photo/Screenshot 2026-08-30 180805.png',
+    desc: 'Movie & TV explorer app with live search, trending and top-rated shelves, and a personal watchlist persisted to local storage, powered by the TMDB API.',
+    stack: ['React', 'Tailwind CSS', 'React Router', 'Axios', 'TMDB API'],
+    live: 'https://movie-explorer-ten-gamma.vercel.app/',
+    github: 'https://github.com/mahmoud-hassan-web-dev/movie-explorer',
+  },
 ]
