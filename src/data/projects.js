@@ -48,7 +48,7 @@ export const projects = [
     {
     name: 'CineScope',
     accent: 'var(--green)',
-    img: '/photo/Screenshot 2026-08-30 180805.png',
+    img: '/photo/CineScope/Screenshot 2026-08-30 180805.png',
     desc: 'Movie & TV explorer app with live search, trending and top-rated shelves, and a personal watchlist persisted to local storage, powered by the TMDB API.',
     stack: ['React', 'Tailwind CSS', 'React Router', 'Axios', 'TMDB API'],
     live: 'https://movie-explorer-ten-gamma.vercel.app/',
