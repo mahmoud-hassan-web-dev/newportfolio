@@ -4,13 +4,13 @@ import { useReveal } from '../hooks/useReveal.js'
 export default function Projects() {
   const headRef = useReveal()
   const gridRef = useReveal()
-
+  const numword =["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
   return (
     <section className="projects" id="work">
       <div className="wrap">
         <div className="section-head reveal" ref={headRef}>
           <span className="eyebrow">Selected work</span>
-          <h2>Five builds, all shipped.</h2>
+          <h2>{numword[projects.length]} builds, all shipped.</h2>
           <p>Mostly e-commerce and product UI — carts, filtering, auth, and clean responsive layouts.</p>
         </div>
 
