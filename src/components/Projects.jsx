@@ -1,6 +1,6 @@
 import { projects } from '../data/projects.js'
 import { useReveal } from '../hooks/useReveal.js'
-
+import converter from 'number-to-words';
 export default function Projects() {
   const headRef = useReveal()
   const gridRef = useReveal()
@@ -10,7 +10,7 @@ export default function Projects() {
       <div className="wrap">
         <div className="section-head reveal" ref={headRef}>
           <span className="eyebrow">Selected work</span>
-          <h2>{numword[projects.length]} builds, all shipped.</h2>
+          <h2>{converter.toWords(projects.length)} builds, all shipped.</h2>
           <p>Mostly e-commerce and product UI — carts, filtering, auth, and clean responsive layouts.</p>
         </div>
 
