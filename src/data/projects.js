@@ -54,4 +54,13 @@ export const projects = [
     live: 'https://movie-explorer-ten-gamma.vercel.app/',
     github: 'https://github.com/mahmoud-hassan-web-dev/movie-explorer',
   },
+  {
+  name: 'EstatePro',
+  accent: 'var(--blue)', 
+  img: '/photo/EstatePro/Screenshot 2026-09-03 004754.png',
+  desc: 'Multi-role smart real estate & property management platform with specialized dashboards for buyers, landlords, finance, and admins.',
+  stack: ['React 18', 'TypeScript', 'Tailwind CSS', 'Zustand', 'React Router', 'Vite'],
+  live: 'https://estatepro-seven.vercel.app/',
+  github: 'https://github.com/mahmoud-hassan-web-dev/EstatePro',
+},
 ]

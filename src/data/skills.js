@@ -4,7 +4,7 @@ export const skillGroups = [
     tags: [
       'HTML5', 'Semantic HTML', 'CSS3', 'Flexbox', 'Responsive Design',
       'JavaScript ES6+', 'React.js', 'Tailwind CSS', 'Bootstrap 4/5',
-      'CSS Modules', 'Context API', 'DOM Manipulation',
+      'CSS Modules', 'Context API', 'DOM Manipulation', 'TypeScript', 'Zustand', 'React Router', 'Vite',
     ],
   },
   {
