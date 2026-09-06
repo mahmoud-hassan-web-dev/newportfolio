@@ -63,4 +63,13 @@ export const projects = [
   live: 'https://estatepro-seven.vercel.app/',
   github: 'https://github.com/mahmoud-hassan-web-dev/EstatePro',
 },
+{
+  name: 'Magic Corn Menu',
+  accent: 'var(--green)', 
+  img: '/photo/magic-corn/screenshot.png', 
+  desc: 'A modern, responsive digital QR-code menu for a local shop, featuring fluid category filtering, interactive item modals, and dual-language (English/Arabic) support.',
+  stack: ['React', 'Tailwind CSS', 'Vite'],
+  live: 'https://magic-corn.vercel.app/',
+  github: 'https://github.com/mahmoud-hassan-web-dev/magic-corn'
+},
 ]
