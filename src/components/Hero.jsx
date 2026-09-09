@@ -1,20 +1,22 @@
 import { heroTags } from '../data/skills.js'
+import { useLanguage } from '../context/LanguageContext.jsx'
 
 export default function Hero() {
+  const { t } = useLanguage()
+  const h = t.hero
+
   return (
     <section className="hero" id="top">
       <div className="wrap hero-grid">
         <div>
-          <span className="eyebrow">Available for new roles</span>
-          <h1>Mahmoud Hassan builds <em>fast, real</em> interfaces.</h1>
-          <p className="lede">
-            Front-End Web Developer focused on React, JavaScript and Tailwind CSS —
-            turning designs into responsive, production-ready web apps, from
-            e-commerce carts to full-stack platforms.
-          </p>
+          <span className="eyebrow">{h.eyebrow}</span>
+          <h1>
+            {h.titleStart} <em>{h.titleEm}</em> {h.titleEnd}
+          </h1>
+          <p className="lede">{h.lede}</p>
           <div className="hero-actions">
-            <a href="#work" className="btn btn-solid">View projects</a>
-            <a href="#contact" className="btn btn-outline">Get in touch</a>
+            <a href="#work" className="btn btn-solid">{h.viewProjects}</a>
+            <a href="#contact" className="btn btn-outline">{h.getInTouch}</a>
           </div>
           <div className="hero-tags">
             {heroTags.map((tag, i) => (
@@ -34,7 +36,7 @@ export default function Hero() {
             <span className="mock-dot"></span>
             <span className="mock-dot"></span>
             <span className="mock-dot"></span>
-            <span className="mock-url">myportfolio.dev</span>
+            <span className="mock-url">{h.mockUrl}</span>
           </div>
           <div className="mock-body">
             <div className="mock-block tall b1" style={{ animationDelay: '.05s' }}></div>

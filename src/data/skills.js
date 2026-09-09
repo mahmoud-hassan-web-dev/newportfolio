@@ -13,7 +13,7 @@ export const skillGroups = [
   },
   {
     title: 'Tools & Workflow',
-    tags: ['Git', 'Terminal / Unix', 'AJAX & JSON', 'Async JavaScript', 'Vercel','GitHub', 'npm', 'Postman', 'VS Code', 'Chrome DevTools','AI code assistants (testing and debugging)'],
+    tags: ['Git', 'Terminal / Unix', 'AJAX & JSON', 'Async JavaScript', 'Vercel', 'GitHub', 'npm', 'Postman', 'VS Code', 'Chrome DevTools', 'AI code assistants (testing and debugging)'],
   },
   {
     title: 'Programming & Core CS',
@@ -21,4 +21,4 @@ export const skillGroups = [
   },
 ]
 
-export const heroTags = ['React.js', 'JavaScript ES6+', 'Tailwind CSS', 'Node.js', 'MongoDB', 'REST APIs','Express.js']
+export const heroTags = ['React.js', 'JavaScript ES6+', 'Tailwind CSS', 'Node.js', 'MongoDB', 'REST APIs', 'Express.js']

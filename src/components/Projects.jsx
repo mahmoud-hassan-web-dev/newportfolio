@@ -1,58 +1,68 @@
 import { projects } from '../data/projects.js'
 import { useReveal } from '../hooks/useReveal.js'
-import converter from 'number-to-words';
+import { useLanguage } from '../context/LanguageContext.jsx'
+
 export default function Projects() {
   const headRef = useReveal()
   const gridRef = useReveal()
-  const numword =["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+  const { t } = useLanguage()
+  const p = t.projects
+
+  const countPhrase = p.countPhrases[projects.length] || `${projects.length}`
+
   return (
     <section className="projects" id="work">
       <div className="wrap">
         <div className="section-head reveal" ref={headRef}>
-          <span className="eyebrow">Selected work</span>
-          <h2>{converter.toWords(projects.length)} builds, all shipped.</h2>
-          <p>Mostly e-commerce and product UI — carts, filtering, auth, and clean responsive layouts.</p>
+          <span className="eyebrow">{p.eyebrow}</span>
+          <h2>{countPhrase}{p.headingSuffix}</h2>
+          <p>{p.desc}</p>
         </div>
 
         <div className="project-grid reveal" ref={gridRef}>
-          {projects.map((p) => (
-            <div className="project-card" key={p.name}>
-              <div className="project-top" style={{ background: p.accent }}></div>
-              
-              {p.img && (
-                <div className="project-image">
-                 <a href={p.live} target="_blank" rel="noopener noreferrer">
-                    <img src={p.img} alt={`Preview of ${p.name}`} />
-                 </a>
-                </div>
-              )}
-              
-              <div className="project-body">
-                <div className="project-head">
-                  <h3>{p.name}</h3>
-                  {p.badge && <span className="badge">{p.badge}</span>}
-                </div>
-                <p className="desc">{p.desc}</p>
-                <div className="project-stack">
-                  {p.stack.map((s) => <span key={s}>{s}</span>)}
-                </div>
-                {(p.live || p.github) && (
-                  <div className="project-links">
-                    {p.live && (
-                      <a className="primary" href={p.live} target="_blank" rel="noopener noreferrer">
-                        Live site
-                      </a>
-                    )}
-                    {p.github && (
-                      <a className="secondary" href={p.github} target="_blank" rel="noopener noreferrer">
-                        GitHub
-                      </a>
-                    )}
+          {projects.map((proj) => {
+            const desc = p.items[proj.name] || proj.desc
+            const badge = proj.badge ? (p.badges[proj.badge] || proj.badge) : null
+
+            return (
+              <div className="project-card" key={proj.name}>
+                <div className="project-top" style={{ background: proj.accent }}></div>
+
+                {proj.img && (
+                  <div className="project-image">
+                    <a href={proj.live} target="_blank" rel="noopener noreferrer">
+                      <img src={proj.img} alt={`Preview of ${proj.name}`} />
+                    </a>
                   </div>
                 )}
+
+                <div className="project-body">
+                  <div className="project-head">
+                    <h3>{proj.name}</h3>
+                    {badge && <span className="badge">{badge}</span>}
+                  </div>
+                  <p className="desc">{desc}</p>
+                  <div className="project-stack">
+                    {proj.stack.map((s) => <span key={s}>{s}</span>)}
+                  </div>
+                  {(proj.live || proj.github) && (
+                    <div className="project-links">
+                      {proj.live && (
+                        <a className="primary" href={proj.live} target="_blank" rel="noopener noreferrer">
+                          {p.liveSite}
+                        </a>
+                      )}
+                      {proj.github && (
+                        <a className="secondary" href={proj.github} target="_blank" rel="noopener noreferrer">
+                          {p.github}
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

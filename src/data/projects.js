@@ -45,7 +45,7 @@ export const projects = [
     live: 'https://task-flow-chi-ten-81.vercel.app/',
     github: 'https://github.com/mahmoud-hassan-web-dev/task-flow',
   },
-    {
+  {
     name: 'CineScope',
     accent: 'var(--green)',
     img: '/photo/CineScope/Screenshot 2026-08-30 180805.png',
@@ -55,21 +55,21 @@ export const projects = [
     github: 'https://github.com/mahmoud-hassan-web-dev/movie-explorer',
   },
   {
-  name: 'EstatePro',
-  accent: 'var(--blue)', 
-  img: '/photo/EstatePro/Screenshot 2026-09-03 004754.png',
-  desc: 'Multi-role smart real estate & property management platform with specialized dashboards for buyers, landlords, finance, and admins.',
-  stack: ['React 18', 'TypeScript', 'Tailwind CSS', 'Zustand', 'React Router', 'Vite'],
-  live: 'https://estatepro-seven.vercel.app/',
-  github: 'https://github.com/mahmoud-hassan-web-dev/EstatePro',
-},
-{
-  name: 'Magic Corn Menu',
-  accent: 'var(--green)', 
-  img: '/photo/magic-corn/magic-corn.png', 
-  desc: 'A modern, responsive digital QR-code menu for a local shop, featuring fluid category filtering, interactive item modals, and dual-language (English/Arabic) support.',
-  stack: ['React', 'Tailwind CSS', 'Vite'],
-  live: 'https://magic-corn.vercel.app/',
-  github: 'https://github.com/mahmoud-hassan-web-dev/magic-corn'
-},
+    name: 'EstatePro',
+    accent: 'var(--blue)',
+    img: '/photo/EstatePro/Screenshot 2026-09-03 004754.png',
+    desc: 'Multi-role smart real estate & property management platform with specialized dashboards for buyers, landlords, finance, and admins.',
+    stack: ['React 18', 'TypeScript', 'Tailwind CSS', 'Zustand', 'React Router', 'Vite'],
+    live: 'https://estatepro-seven.vercel.app/',
+    github: 'https://github.com/mahmoud-hassan-web-dev/EstatePro',
+  },
+  {
+    name: 'Magic Corn Menu',
+    accent: 'var(--green)',
+    img: '/photo/magic-corn/magic-corn.png',
+    desc: 'A modern, responsive digital QR-code menu for a local shop, featuring fluid category filtering, interactive item modals, and dual-language (English/Arabic) support.',
+    stack: ['React', 'Tailwind CSS', 'Vite'],
+    live: 'https://magic-corn.vercel.app/',
+    github: 'https://github.com/mahmoud-hassan-web-dev/magic-corn',
+  },
 ]
