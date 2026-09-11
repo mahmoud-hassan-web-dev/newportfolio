@@ -13,7 +13,7 @@ export default function About() {
       <div className="wrap about-grid">
         <div className="reveal" ref={textRef}>
           <div className="about-photo">
-            <img src="/photo/me/me.jpeg" alt={a.photoAlt} />
+            <img src="/photo/me/me1.jpeg" alt={a.photoAlt} />
           </div>
 
           <span className="eyebrow">{a.eyebrow}</span>

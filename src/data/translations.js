@@ -22,7 +22,8 @@ export const translations = {
       lede: 'Front-End Web Developer focused on React, JavaScript and Tailwind CSS — turning designs into responsive, production-ready web apps, from e-commerce carts to full-stack platforms.',
       viewProjects: 'View projects',
       getInTouch: 'Get in touch',
-      mockUrl: 'myportfolio.dev',
+      mockUrl: 'newportfolio',
+      mockPhotoAlt: 'Preview of Mahmoud\u2019s work',
     },
     about: {
       eyebrow: 'About',
@@ -127,7 +128,8 @@ export const translations = {
       lede: 'مطوّر واجهات أمامية (Front-End) متخصص في React وJavaScript وTailwind CSS — أحوّل التصاميم إلى تطبيقات ويب متجاوبة وجاهزة للإطلاق، من عربات التسوّق في المتاجر الإلكترونية إلى المنصات الكاملة.',
       viewProjects: 'شاهد المشاريع',
       getInTouch: 'تواصل معي',
-      mockUrl: 'myportfolio.dev',
+      mockUrl: 'newportfolio',
+      mockPhotoAlt: 'معاينة لأعمال محمود',
     },
     about: {
       eyebrow: 'نبذة عني',

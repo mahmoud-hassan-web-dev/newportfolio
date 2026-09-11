@@ -1,9 +1,26 @@
+import { useEffect, useState } from 'react'
 import { heroTags } from '../data/skills.js'
 import { useLanguage } from '../context/LanguageContext.jsx'
+
+const heroPhotos = [
+  '/photo/me/me1.jpeg',
+  '/photo/me/me2.jpeg',
+  '/photo/me/me3.jpeg',
+  '/photo/me/me4.jpeg',
+]
 
 export default function Hero() {
   const { t } = useLanguage()
   const h = t.hero
+  const [activePhoto, setActivePhoto] = useState(0)
+
+  // Cycle to the next photo every 4s; the CSS handles the fade between them.
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActivePhoto((i) => (i + 1) % heroPhotos.length)
+    }, 4000)
+    return () => clearInterval(id)
+  }, [])
 
   return (
     <section className="hero" id="top">
@@ -39,16 +56,15 @@ export default function Hero() {
             <span className="mock-url">{h.mockUrl}</span>
           </div>
           <div className="mock-body">
-            <div className="mock-block tall b1" style={{ animationDelay: '.05s' }}></div>
-            <div className="mock-row">
-              <div className="mock-block b2" style={{ animationDelay: '.15s' }}></div>
-              <div className="mock-block b3" style={{ animationDelay: '.25s' }}></div>
-              <div className="mock-block b4" style={{ animationDelay: '.35s' }}></div>
-            </div>
-            <div className="mock-row">
-              <div className="mock-block b5" style={{ animationDelay: '.45s' }}></div>
-              <div className="mock-block b5" style={{ animationDelay: '.55s' }}></div>
-              <div className="mock-block b2" style={{ animationDelay: '.65s' }}></div>
+            <div className="mock-block tall mock-photo" style={{ animationDelay: '.05s' }}>
+              {heroPhotos.map((src, i) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={h.mockPhotoAlt}
+                  className={i === activePhoto ? 'mock-photo-active' : ''}
+                />
+              ))}
             </div>
           </div>
         </div>

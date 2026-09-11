@@ -278,13 +278,21 @@
     opacity:0; transform:scale(0.85);
     animation:block-in .5s cubic-bezier(.2,.8,.2,1.3) forwards;
   }
-  .mock-block.tall{height:140px;}
+  .mock-block.tall{height:340px;}
   .mock-block.b1{background:var(--hero);}
   .mock-block.b2{background:var(--coral);}
   .mock-block.b3{background:var(--yellow);}
   .mock-block.b4{background:var(--mint);}
   .mock-block.b5{background:#e4defe;}
   [data-theme="dark"] .mock-block.b5{background:#2a2450;}
+  .mock-photo{padding:0; overflow:hidden; position:relative;}
+  .mock-photo img{
+  position:absolute; inset:0;
+  width:100%; height:100%; object-fit:cover; display:block;
+  opacity:0;
+  transition:opacity 1s ease;
+  }
+  .mock-photo img.mock-photo-active{opacity:1;}
   @keyframes block-in{ to{opacity:1; transform:scale(1);} }
 
   /* ---------- SECTION HEADS ---------- */
@@ -491,4 +499,3 @@
     .skills-grid{grid-template-columns:1fr;}
     .contact-list{grid-template-columns:1fr;}
   }
-  
