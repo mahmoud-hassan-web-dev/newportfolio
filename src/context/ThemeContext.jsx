@@ -5,15 +5,13 @@ const ThemeContext = createContext(null)
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState('light')
 
-  // On first mount: read saved preference, otherwise fall back to system preference.
+  // On first mount: read saved preference. Otherwise keep the 'light' (day) default,
+  // regardless of the visitor's OS/browser preference.
   useEffect(() => {
     const saved = localStorage.getItem('theme')
     if (saved === 'light' || saved === 'dark') {
       setTheme(saved)
-      return
     }
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    setTheme(prefersDark ? 'dark' : 'light')
   }, [])
 
   // Reflect theme on <html data-theme="..."> and persist it.

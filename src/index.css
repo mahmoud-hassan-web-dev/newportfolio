@@ -23,6 +23,9 @@
     --cta-solid-bg:#15122b;
     --cta-solid-text:#ffffff;
 
+    /* small accent-colored text (eyebrows, timeline dates) — flips for dark-mode contrast */
+    --accent-text: var(--coral-deep);
+
     --font-display: 'Space Grotesk', 'Cairo', sans-serif;
     --font-body: 'IBM Plex Sans', 'Cairo', sans-serif;
     --font-mono: 'JetBrains Mono', 'Cairo', monospace;
@@ -31,17 +34,24 @@
     --radius: 18px;
   }
 
+  /* Arabic gets its own, cleaner font stack instead of relying on per-glyph fallback,
+     so headings/body/labels all render consistently in one typeface. */
+  [dir="rtl"]{
+    --font-display: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+    --font-body: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
+    --font-mono: 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
+  }
+  [dir="rtl"] body{ line-height:1.85; }
+
+  /* Only neutrals (surfaces/text/lines) flip in dark mode. Brand hues (--hero, --coral,
+     --yellow, --mint) stay constant on purpose: the Hero/Contact gradients and button
+     hover states are already tuned against those exact values, so letting them shift
+     with the theme was what made dark mode look inconsistent. */
   [data-theme="dark"]{
     --ink:#f1eefb;
     --ink-soft:#b6b0d9;
     --paper:#0d0c18;
     --panel:#171430;
-    --hero:#8a6bff;
-    --hero-deep:#5b3fd1;
-    --coral:#ff7d61;
-    --coral-deep:#ff9c84;
-    --yellow:#ffd666;
-    --mint:#33e0b0;
     --line:#2c2748;
 
     --surface:#141227;
@@ -49,6 +59,8 @@
     --chip-bg:#241f45;
     --chip-text:#c9baff;
     --header-bg: rgba(13,12,24,0.82);
+
+    --accent-text:#ff9c84;
   }
 
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -168,13 +180,13 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    background:radial-gradient(120% 140% at 15% 0%, var(--hero) 0%, var(--hero-deep) 62%, #200f6e 100%);
+    background:radial-gradient(120% 140% at 15% 0%, #4a26c9 0%, #2f1794 62%, #200f6e 100%);
     color:var(--white);
     padding:88px 0 110px;
     position:relative;
     overflow:hidden;
   }
-  [dir="rtl"] .hero{background:radial-gradient(120% 140% at 85% 0%, var(--hero) 0%, var(--hero-deep) 62%, #200f6e 100%);}
+  [dir="rtl"] .hero{background:radial-gradient(120% 140% at 85% 0%, #4a26c9 0%, #2f1794 62%, #200f6e 100%);}
   .hero::before{
     content:"";
     position:absolute; inset:0;
@@ -277,7 +289,7 @@
 
   /* ---------- SECTION HEADS ---------- */
   .section-head{max-width:640px; margin-bottom:52px;}
-  .section-head .eyebrow{color:var(--coral-deep);}
+  .section-head .eyebrow{color:var(--accent-text);}
   .section-head .eyebrow::before{background:var(--coral);}
   .section-head h2{font-size:clamp(1.9rem, 3.4vw, 2.6rem); margin-top:14px;}
   .section-head p{margin-top:14px; color:var(--ink-soft); font-size:1.02rem;}
@@ -286,12 +298,20 @@
   .about{background:var(--panel); transition:background-color .25s ease;}
   .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;}
   .about-photo{
-    width:132px; height:132px; border-radius:50%;
-    overflow:hidden; margin-bottom:24px;
-    border:3px solid var(--surface);
-    box-shadow:0 0 0 4px var(--coral), 0 18px 34px -14px rgba(20,10,60,0.35);
+    width:220px; height:220px; border-radius:50%;
+    padding:6px;
+    background:linear-gradient(135deg, var(--coral), var(--hero));
+    box-shadow:0 0 0 6px var(--panel), 0 22px 44px -18px rgba(20,10,60,0.4);
+    margin-bottom:28px;
   }
-  .about-photo img{width:100%; height:100%; object-fit:cover;}
+  .about-photo img{
+    width:100%; height:100%; border-radius:50%;
+    object-fit:cover; display:block;
+    border:4px solid var(--surface);
+  }
+  @media (max-width:700px){
+    .about-photo{width:160px; height:160px;}
+  }
   .about-text p{color:var(--ink-soft); margin-bottom:16px; font-size:1.02rem;}
   .about-text strong{color:var(--ink);}
 
@@ -305,7 +325,7 @@
     width:26px; height:26px; border-radius:50%;
     background:var(--surface); border:2px solid var(--coral);
     display:flex; align-items:center; justify-content:center;
-    font-family:var(--font-mono); font-size:0.68rem; font-weight:600; color:var(--coral-deep);
+    font-family:var(--font-mono); font-size:0.68rem; font-weight:600; color:var(--accent-text);
     position:relative; z-index:1;
   }
   .tl-item:not(:last-child) .tl-dot::after{
@@ -313,7 +333,7 @@
     background:var(--line); transform:translateX(-50%);
   }
   .tl-content h3{font-size:1.02rem; font-family:var(--font-body); font-weight:600;}
-  .tl-content .tl-date{font-family:var(--font-mono); font-size:0.74rem; color:var(--coral-deep); display:block; margin-bottom:4px;}
+  .tl-content .tl-date{font-family:var(--font-mono); font-size:0.74rem; color:var(--accent-text); display:block; margin-bottom:4px;}
   .tl-content p{color:var(--ink-soft); font-size:0.92rem; margin-top:4px;}
 
   /* ---------- SKILLS ---------- */
@@ -402,7 +422,7 @@
 
   /* ---------- CONTACT ---------- */
   .contact{
-    background:linear-gradient(135deg, var(--hero-deep), var(--hero) 60%, #3a1fb8);
+    background:linear-gradient(135deg, #2f1794, #4a26c9 60%, #3a1fb8);
     color:var(--white);
     position:relative;
     overflow:hidden;
@@ -471,3 +491,4 @@
     .skills-grid{grid-template-columns:1fr;}
     .contact-list{grid-template-columns:1fr;}
   }
+  
