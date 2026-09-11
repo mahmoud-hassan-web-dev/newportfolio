@@ -14,9 +14,16 @@ export default function Projects() {
     <section className="projects" id="work">
       <div className="wrap">
         <div className="section-head reveal" ref={headRef}>
-          <span className="eyebrow">{p.eyebrow}</span>
-          <h2>{countPhrase}{p.headingSuffix}</h2>
-          <p>{p.desc}</p>
+          <div className="section-head-text">
+            <span className="eyebrow">{p.eyebrow}</span>
+            <h2>{countPhrase}{p.headingSuffix}</h2>
+            <p>{p.desc}</p>
+          </div>
+          <div className="section-photo">
+            <div className="section-photo-inner">
+              <img src="/photo/me/me4.jpeg" alt={t.about.photoAlt} />
+            </div>
+          </div>
         </div>
 
         <div className="project-grid reveal" ref={gridRef}>

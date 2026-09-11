@@ -12,9 +12,16 @@ export default function Skills() {
     <section id="skills">
       <div className="wrap">
         <div className="section-head reveal" ref={headRef}>
-          <span className="eyebrow">{s.eyebrow}</span>
-          <h2>{s.heading}</h2>
-          <p>{s.desc}</p>
+          <div className="section-head-text">
+            <span className="eyebrow">{s.eyebrow}</span>
+            <h2>{s.heading}</h2>
+            <p>{s.desc}</p>
+          </div>
+          <div className="section-photo">
+            <div className="section-photo-inner">
+              <img src="/photo/me/me2.jpeg" alt={t.about.photoAlt} />
+            </div>
+          </div>
         </div>
 
         <div className="skills-grid reveal" ref={gridRef}>
